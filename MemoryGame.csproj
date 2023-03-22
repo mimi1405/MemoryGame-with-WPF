@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Csharp.png" />
+    <None Remove="Images\fsharp.png" />
+    <None Remove="Images\haskell.png" />
+    <None Remove="Images\java.png" />
+    <None Remove="Images\JS.png" />
+    <None Remove="Images\Memoryicon.png" />
+    <None Remove="Images\Python.png" />
+    <None Remove="Images\React.png" />
+    <None Remove="Images\ruby.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Csharp.png" />
+    <Resource Include="Images\fsharp.png" />
+    <Resource Include="Images\haskell.png" />
+    <Resource Include="Images\java.png" />
+    <Resource Include="Images\JS.png" />
+    <Resource Include="Images\Memoryicon.png" />
+    <Resource Include="Images\Python.png" />
+    <Resource Include="Images\React.png" />
+    <Resource Include="Images\ruby.png" />
+  </ItemGroup>
+
+</Project>
