@@ -40,25 +40,6 @@ namespace MemoryGame
         public bool IsMemoryImageVisible { get; set; }
         private Button firstButtonClicked = null;
         private Button secondButtonClicked = null;
-        //private Dictionary<String, int> keyValuePairs = new Dictionary<String, int>()
-        //{
-        //    { "Csharp.png",1 },
-        //    {"fsharp.png",2} ,
-        //    {"haskell.png",3} ,
-        //    {"java.png",4 } ,
-        //    {"JS.png",5   } ,
-        //    {"Python.png",6} ,
-        //    {"React.png",7} ,
-        //    {"ruby.png",8 } ,
-        //    { "Csharp.png",1 },
-        //    {"fsharp.png",2},
-        //    {"haskell.png",3} ,
-        //    {"java.png",4 } ,
-        //    {"JS.png",5   } ,
-        //    {"Python.png",6} ,
-        //    {"React.png",7} ,
-        //    {"ruby.png", 8} ,
-        //};
 
 
         private void SetupGame()
@@ -103,7 +84,7 @@ namespace MemoryGame
                 string nextPath = imagePath + paths[randomIndex];
                 paths.RemoveAt(randomIndex);
                 Image languageIcon = (Image)stackPanel.Children[1];
-                languageIcon.Visibility = Visibility.Hidden;
+                languageIcon.Visibility = Visibility.Collapsed;
                 Uri languageUri = new Uri(nextPath, UriKind.RelativeOrAbsolute);
                 BitmapImage languagesBitmap = new BitmapImage(languageUri);
                 languageIcon.Source = languagesBitmap;
@@ -142,7 +123,7 @@ namespace MemoryGame
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             moves++;
-            moveBtn.Content = "Moves " + moves.ToString();
+            moveBtn.Content = "Moves: " + moves.ToString();
             Button clickedButton = sender as Button;
             StackPanel stackPanel = (StackPanel)clickedButton.Content;
             Image iconImage = (Image)stackPanel.Children[0];
@@ -152,12 +133,10 @@ namespace MemoryGame
 
             if (firstButtonClicked == null)
             {
-                // This is the first button we've clicked
                 firstButtonClicked = clickedButton;
             }
             else if (secondButtonClicked == null)
             {
-                // This is the second button we've clicked
                 secondButtonClicked = clickedButton;
 
                 StackPanel firstStackPanel = (StackPanel)firstButtonClicked.Content;

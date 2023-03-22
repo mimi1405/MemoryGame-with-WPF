@@ -112,7 +112,7 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Button Grid.Column="1" Cursor="Hand" x:Name="matchedPairsBtn" BorderBrush="Transparent" Background="#454545" Foreground="WhiteSmoke" FontSize="18"
+            <Button Grid.Column="1" x:Name="matchedPairsBtn" BorderBrush="Transparent" Background="#454545" Foreground="WhiteSmoke" FontSize="18"
                     Content="Pairs matched" Width="150" Height="50">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -122,7 +122,7 @@
             </Button>
 
 
-            <Button Grid.Column="2" Cursor="Hand" BorderBrush="Transparent" Background="#454545" Foreground="WhiteSmoke" FontSize="18"
+            <Button Grid.Column="2" BorderBrush="Transparent" Background="#454545" Foreground="WhiteSmoke" FontSize="18"
                     x:Name="moveBtn" Content="Total moves" Width="150" Height="50">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -370,12 +370,12 @@
             </Grid.ColumnDefinitions>
 
             <!-- On hover change color to: #FF895A -->
-            <Button x:Name="BtnResetGame" Grid.Column="0"
+            <Button x:Name="BtnResetGame" Cursor="Hand" Grid.Column="0"
                     Content="Reset Game" Width="150" Height="50" Style="{StaticResource btnResetGame}" Click="BtnResetGame_Click" >
             </Button>
 
             <!-- On hover change color to: #CD4D1E -->
-            <Button x:Name="BtnEndGame" Grid.Column="1"
+            <Button x:Name="BtnEndGame" Grid.Column="1" Cursor="Hand"
                     Content="End Game" Width="150" Height="50" Style="{StaticResource btnEndGame}" Click="BtnEndGame_Click" >
             </Button>
 
